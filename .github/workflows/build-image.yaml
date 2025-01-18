@@ -1,6 +1,7 @@
 name: Build and Push Docker Image to GHCR
 
 on:
+  workflow_dispatch:
   push:
     # Trigger the action on any push to the repository
     # This ensures that it runs when changes are made to the Dockerfile or any other files
