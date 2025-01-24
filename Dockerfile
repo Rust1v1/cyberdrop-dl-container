@@ -1,5 +1,5 @@
 FROM python:3.12-alpine
-ARG CYBERDROP_VERSION=6.2.0.post1
+ARG CYBERDROP_VERSION=6.3.0
 RUN apk update && apk add pipx gcc python3-dev musl-dev
 RUN pipx install cyberdrop-dl-patched==${CYBERDROP_VERSION}
 # This will inject a working version of this module, may not always be needed
