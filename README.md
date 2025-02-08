@@ -18,7 +18,7 @@ A Container for [Cyberdrop-DL-Patched](https://github.com/jbsparrow/CyberDropDow
 ## Prerequisites
 - Container Engine installed on your system.
 - [Install Docker](https://docs.docker.com/get-docker/)
-- [Install Podman] (https://podman.io/docs/installation)
+- [Install Podman](https://podman.io/docs/installation)
 
 ---
 
