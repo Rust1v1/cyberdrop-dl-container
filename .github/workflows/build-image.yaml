@@ -32,7 +32,7 @@ jobs:
         username: rust1v1
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Build and Push Docker image
+    - name: Build and Push Normal Docker image
       uses: docker/build-push-action@v2
       with:
         context: .
@@ -41,3 +41,16 @@ jobs:
         tags: |
           ghcr.io/rust1v1/cyberdrop-dl:${{ env.VERSION }}
           ghcr.io/rust1v1/cyberdrop-dl:latest
+
+    - name: Build and Push ffmpeg Docker image
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: |
+          ghcr.io/rust1v1/cyberdrop-dl:${{ env.VERSION }}-ffmpeg
+          ghcr.io/rust1v1/cyberdrop-dl:latest-ffmpeg
+        build-args: |
+          INSTALL_FFMPEG=true
+
